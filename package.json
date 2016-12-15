@@ -1,0 +1,23 @@
+{
+  "name": "npm-learning-tool",
+  "version": "1.0.0",
+  "description": "this is just a test npm package",
+  "main": "https_requests.js",
+  "dependencies": {
+    "express": "^4.14.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dannycho7/Node_React_App.git"
+  },
+  "author": "Danny Hyun Cho",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dannycho7/Node_React_App/issues"
+  },
+  "homepage": "https://github.com/dannycho7/Node_React_App#readme"
+}

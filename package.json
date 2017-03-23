@@ -1,14 +1,16 @@
 {
-  "name": "npm-learning-tool",
+  "name": "Node_React_App",
   "version": "1.0.0",
-  "description": "this is just a test npm package",
-  "main": "https_requests.js",
+  "description": "Learning to create Node Express React web apps",
+  "main": "app.js",
   "dependencies": {
-    "express": "^4.14.0"
+    "ejs": "^2.5.6",
+    "express": "^4.15.2"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",

@@ -1,16 +1,62 @@
-var express = require('express');
-var app = express();
-var path = require('path');
-var port =  process.env.PORT || 8000;
+import React from 'react';
 
-app.set('view engine', 'ejs');
+class App extends React.Component {
+  constructor() {
+    super();
 
-app.use( express.static( path.join( __dirname, 'static' ) ) );
+    this.state = {
+      data:
+      [
+        {
+           "id":1,
+           "name":"Foo",
+           "age":"20"
+        },
+        {
+           "id":2,
+           "name":"Bar",
+           "age":"30"
+        },
 
-app.get('/', function(req,res){
-	res.render('index');
-});
+        {
+           "id":3,
+           "name":"Baz",
+           "age":"40"
+        }
+      ]
+    }
+  }
+   render() {
+      return (
+         <div>
+            <Header text="Header"/>
+            <Paragraph data={this.state.data}/>
+         </div>
+      );
+   }
+}
 
-app.listen(port, function(){
-	console.log("Server listening in on port " + port);
-});
+class Header extends React.Component {
+  render(){
+    return (
+      <h1>{this.props.text}</h1>
+    )
+  }
+}
+class Paragraph extends React.Component {
+  render(){
+    var list = this.props.data.map(function(data){
+      return <li>{data.id}</li>
+    });
+    return (
+      <div>
+        <p>This is the paragraph area</p>
+        <ul>
+          {list}
+        </ul>
+      </div>
+    )
+  }
+}
+
+export default App;
